@@ -6,49 +6,65 @@
 <title>카운터 페이지</title>
 <style>
     body { font-family: Arial; padding: 20px; }
-    .group-title { font-size: 22px; font-weight: bold; margin-top: 25px; }
-    .row { display: flex; align-items: center; gap: 10px; margin: 10px 0; }
+    .row { display: flex; align-items: center; gap: 10px; margin: 15px 0; }
+
+    /* 버튼 크기 50% 증가 적용 */
     button {
       flex: 1;
-      padding: 22px; /* 50% 증가 */
-      font-size: 27px; /* 50% 증가 */
+      padding: 22px;
+      font-size: 27px;
       border: none;
       border-radius: 12px;
       background: #007bff;
       color: white;
     }
-    .qty { width: 50px; text-align: center; font-size: 18px; }
+
+    /* 숫자 표시 스타일 */
+    .qty { 
+      width: 60px; 
+      text-align: center; 
+      font-size: 24px; 
+      font-weight: bold;
+      background: #eee;
+      padding: 10px 0;
+      border-radius: 8px;
+    }
+
+    /* 색상 지정 */
+    .minus { background: #dc3545; }
+    .label-btn { background: #6c757d; }
+    .plus5 { background: #28a745; }
 </style>
 </head>
 <body>
 
 <h2>KPP</h2>
 <div class="row">
-    <button onclick="changeQty('N12', -1)">-</button>
-    <button onclick="changeQty('N12', +1)">N12</button>
-    <button onclick="changeQty('N12', +1)">+</button>
+    <button class="minus" onclick="changeQty('N12', -1)">-</button>
+    <button class="label-btn" onclick="changeQty('N12', 1)">N12</button>
+    <button class="plus5" onclick="changeQty('N12', 5)">+5</button>
     <span class="qty" id="N12">0</span>
 </div>
 
 <div class="row">
-    <button onclick="changeQty('N11', -1)">-</button>
-    <button onclick="changeQty('N11', +1)">N11</button>
-    <button onclick="changeQty('N11', +1)">+</button>
+    <button class="minus" onclick="changeQty('N11', -1)">-</button>
+    <button class="label-btn" onclick="changeQty('N11', 1)">N11</button>
+    <button class="plus5" onclick="changeQty('N11', 5)">+5</button>
     <span class="qty" id="N11">0</span>
 </div>
 
 <h2>AJ</h2>
 <div class="row">
-    <button onclick="changeQty('A12', -1)">-</button>
-    <button onclick="changeQty('A12', +1)">A12</button>
-    <button onclick="changeQty('A12', +1)">+</button>
+    <button class="minus" onclick="changeQty('A12', -1)">-</button>
+    <button class="label-btn" onclick="changeQty('A12', 1)">A12</button>
+    <button class="plus5" onclick="changeQty('A12', 5)">+5</button>
     <span class="qty" id="A12">0</span>
 </div>
 
 <div class="row">
-    <button onclick="changeQty('A11', -1)">-</button>
-    <button onclick="changeQty('A11', +1)">A11</button>
-    <button onclick="changeQty('A11', +1)">+</button>
+    <button class="minus" onclick="changeQty('A11', -1)">-</button>
+    <button class="label-btn" onclick="changeQty('A11', 1)">A11</button>
+    <button class="plus5" onclick="changeQty('A11', 5)">+5</button>
     <span class="qty" id="A11">0</span>
 </div>
 
