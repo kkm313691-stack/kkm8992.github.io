@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>카운터 페이지</title>
+<style>
+    body { font-family: Arial; padding: 20px; }
+    .group-title { font-size: 22px; font-weight: bold; margin-top: 25px; }
+    .row { display: flex; align-items: center; gap: 10px; margin: 10px 0; }
+    button { padding: 8px 15px; font-size: 16px; }
+    .qty { width: 50px; text-align: center; font-size: 18px; }
+</style>
+</head>
+<body>
+
+<h2>KPP</h2>
+<div class="row">
+    <button onclick="changeQty('N12', -1)">-</button>
+    <button onclick="changeQty('N12', +1)">N12</button>
+    <button onclick="changeQty('N12', +1)">+</button>
+    <span class="qty" id="N12">0</span>
+</div>
+
+<div class="row">
+    <button onclick="changeQty('N11', -1)">-</button>
+    <button onclick="changeQty('N11', +1)">N11</button>
+    <button onclick="changeQty('N11', +1)">+</button>
+    <span class="qty" id="N11">0</span>
+</div>
+
+<h2>AJ</h2>
+<div class="row">
+    <button onclick="changeQty('A12', -1)">-</button>
+    <button onclick="changeQty('A12', +1)">A12</button>
+    <button onclick="changeQty('A12', +1)">+</button>
+    <span class="qty" id="A12">0</span>
+</div>
+
+<div class="row">
+    <button onclick="changeQty('A11', -1)">-</button>
+    <button onclick="changeQty('A11', +1)">A11</button>
+    <button onclick="changeQty('A11', +1)">+</button>
+    <span class="qty" id="A11">0</span>
+</div>
+
+<script>
+function changeQty(id, diff) {
+    const span = document.getElementById(id);
+    let value = parseInt(span.innerText) + diff;
+    if (value < 0) value = 0;
+    span.innerText = value;
+}
+</script>
+
+</body>
+</html>
