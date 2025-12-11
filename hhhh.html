@@ -1,75 +1,91 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta charset="UTF-8" />
-  <title>버튼 수량 카운터</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background: #f5f5f5;
-    }
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<title>버튼 수량 카운터</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+padding: 20px;
+background: #f5f5f5;
+}
 
-    .group {
-      margin-bottom: 30px;
-      padding: 20px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    }
 
-    .title {
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+.group {
+margin-bottom: 30px;
+padding: 20px;
+background: #fff;
+border-radius: 10px;
+box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
 
-    .btn-row {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 10px;
-    }
 
-    button {
-      flex: 1;
-      padding: 15px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      background: #007bff;
-      color: white;
-    }
+.row {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 15px;
+}
 
-    .count {
-      font-size: 18px;
-      margin-left: 10px;
-      font-weight: bold;
-    }
-  </style>
+
+.title {
+font-size: 22px;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+
+button {
+padding: 10px 16px;
+font-size: 16px;
+border: none;
+border-radius: 8px;
+background: #007bff;
+color: white;
+}
+
+
+.minus {
+background: #dc3545;
+}
+
+
+.plus {
+background: #28a745;
+}
+
+
+.label-btn {
+background: #6c757d;
+}
+
+
+.count {
+font-size: 18px;
+width: 40px;
+text-align: center;
+font-weight: bold;
+background: #eee;
+padding: 8px 0;
+border-radius: 6px;
+}
+</style>
 </head>
 <body>
 
-  <div class="group">
-    <div class="title">KPP</div>
 
-    <div class="btn-row">
-      <button onclick="subtract('a11')">-</button>
-      <button onclick="add('a11')">+</button>
-      <span id="a11" class="count">0</span>
-    </div>
-  </div>
+<div class="group">
+<div class="title">KPP</div>
 
-  <script>
-    function add(id) {
-      const el = document.getElementById(id);
-      el.textContent = Number(el.textContent) + 1;
-    }
-      function subtract(id) {
-      const el = document.getElementById(id);
-      const current = Number(el.textContent);
-      if (current > 0) el.textContent = current - 1;
-    }
-  </script>
-</body>
+
+<div class="row">
+<button class="minus" onclick="sub('n12')">−</button>
+<button class="label-btn" onclick="add('n12')">N12</button>
+<button class="plus" onclick="add('n12')">+</button>
+<span id="n12" class="count">0</span>
+</div>
+
+
+<div class="row">
 </html>
